@@ -10,5 +10,6 @@ body {
 	min-height: 100%;
 	background-image: url(/star-catcher-astronaut-catching-stars-for-research-astronaut.jpg);
 	background-size: cover;
-	background-repeat: repeat-y
+	background-repeat: repeat-y;
+	background-position: center
 }
