@@ -29,17 +29,16 @@ body {
 }
 
 .menu-button {
-	height:50px;
+	height:35px;
 	width:50px;
 	box-sizing: border-box;
-	border:1px solid #ccc;
 	border-radius: 10%
 }
 
 .menu-button span{
 	display:block;
 	width:40px;
-	height:10px;
+	height:4px;
 	margin:5px auto;
 	background-color:#ccc;
 	border-radius:10%
