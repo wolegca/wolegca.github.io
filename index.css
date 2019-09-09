@@ -16,7 +16,7 @@ body {
 }
 
 .menu-container {
-	position: relative;
+	position: absolute;
 	height:100%;
 	float:left;
 	width:100%;
@@ -26,4 +26,17 @@ body {
 	display: block;
 	text-decoration: none;
 	list-style: none;
+}
+
+.menu-button {
+	height:50px;
+	width:50px;
+	display: block;
+}
+
+.menu-button span{
+	display:block;
+	width:40px;
+	height:10px;
+	margin:5px auto;
 }
