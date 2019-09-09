@@ -31,7 +31,6 @@ body {
 .menu-button {
 	height:50px;
 	width:50px;
-	display: block;
 	box-sizing: border-box;
 	border:1px solid #ccc;
 	border-radius: 10%
