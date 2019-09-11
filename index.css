@@ -1,3 +1,4 @@
+body,
 html {
 	margin: 0;
 	padding: 0;
@@ -5,41 +6,108 @@ html {
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	min-height: 100%;
-	position:relative;
-	background-image: url(/star-catcher-astronaut-catching-stars-for-research-astronaut.jpg);
+	background: url(star-catcher-astronaut-catching-stars-for-research-astronaut.jpg) no-repeat center;
 	background-size: cover;
-	background-repeat: repeat-y;
-	background-position: center
+	width: 200%;
+	overflow: hidden
 }
 
-.menu-container {
-	position: absolute;
-	height:100%;
-	float:left;
-	width:100%;
+input#menu-control {
+	display: none
 }
 
-.menu-container ul {
+div.menu-container {
 	display: block;
-	text-decoration: none;
-	list-style: none;
-}
-
-.menu-button {
-	height:35px;
-	width:50px;
+	position: relative;
+	float: left;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
 	box-sizing: border-box;
-	border-radius: 10%
+	padding-top: 50px;
+	transition: all .5s ease;
+	overflow: hidden
 }
 
-.menu-button span{
-	display:block;
-	width:40px;
-	height:4px;
-	margin:5px auto;
-	background-color:#ccc;
-	border-radius:10%
+div.menu-container ul {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	top: 30%;
+	transform: translateY(-50%)
+}
+
+div.menu-container ul li {
+	list-style: none;
+	text-align: center;
+	white-space: nowrap
+}
+
+div.menu-container ul li a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	padding: 8px 0 0;
+	transition: all .5s ease;
+	font-size: 24px;
+	height: 40px
+}
+
+div.menu-container ul li a:hover {
+	background-color: rgba(255, 0, 0, .5)
+}
+
+div.menu-container ul>li+li:before {
+	content: '';
+	display: block;
+	height: 1px;
+	margin: 2px 2px
+}
+
+label[for=menu-control] {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 30px;
+	cursor: pointer
+}
+
+div.menu-button span {
+	width: 44px;
+	height: 3px;
+	background-color: #ccc;
+	display: block;
+	margin: 5px 0 0 3px
+}
+
+input#menu-control:checked+div.menu-container {
+	width: 350px;
+	left: 0
+}
+
+div.content-border {
+	width: 50%;
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+	padding: 50px 50px 25px;
+	overflow-y:scroll
+}
+
+div.content {
+	height: 200px;
+	background-color: #fff;
+	border-radius: 15px;
+	opacity: .5;
+	animation: anim-content .5s;
+	transition: opacity .5s ease;
+	cursor: pointer;
+	padding: 15px
+}
+
+div.content:hover {
+	opacity: 1
 }
