@@ -7,7 +7,7 @@ html {
 }
 
 body {
-	background: url(bg.jpg) no-repeat center;
+	background:black url(bg.jpg) no-repeat center;
 	background-size: cover;
 	width: 200%;
 	z-index:0
