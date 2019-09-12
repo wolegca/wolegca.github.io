@@ -3,13 +3,13 @@ html {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	overflow: hidden;
+	overflow: hidden
 }
 
 body {
 	background: url(star-catcher-astronaut-catching-stars-for-research-astronaut.jpg) no-repeat center;
 	background-size: cover;
-	width: 200%;
+	width: 200%
 }
 
 input#menu-control {
@@ -83,10 +83,6 @@ div.menu-button span {
 	margin: 5px 0 0 3px
 }
 
-input#menu-control:checked+div.menu-container {
-	width: 350px;
-	left: 0
-}
 
 div.content-border {
 	width: 50%;
@@ -94,20 +90,44 @@ div.content-border {
 	float: left;
 	box-sizing: border-box;
 	padding: 50px 50px 25px;
-	overflow-y:scroll
+	overflow-y: scroll
 }
 
 div.content {
-	height: 200px;
+	min-height: 200px;
+	max-width: 800px;
 	background-color: #fff;
 	border-radius: 15px;
 	opacity: .5;
-	animation: anim-content .5s;
-	transition: opacity .5s ease;
+	transition: opacity .5s ease,transform .5s ease;
 	cursor: pointer;
-	padding: 15px
+	padding: 15px;
+	margin-bottom: 25px
 }
 
 div.content:hover {
-	opacity: 1
+	opacity: 1;
+}
+
+@media screen and (max-width:700px) {
+	input#menu-control:checked+div.menu-container {
+		width: 50%;
+		left: 0
+	}
+}
+
+@media screen and (min-width:700px) {
+	input#menu-control:checked+div.menu-container {
+		width: 350px;
+		left: 0
+	}
+
+	div.content {
+		margin-left:auto;
+		margin-right:auto
+	}
+
+	div.content:hover {
+		transform:scale(1.05)
+	}
 }
