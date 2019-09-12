@@ -171,7 +171,10 @@ input#menu-control:checked~label.content-mask{
 @media screen and (max-width:700px) {
 	input#menu-control:checked+div.menu-container {
 		width: 50%;
-		left: 0
+	}
+
+	div.content-border{
+		padding: 50px 5px 25px;
 	}
 }
 
