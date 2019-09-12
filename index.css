@@ -131,3 +131,7 @@ div.content:hover {
 		transform:scale(1.05)
 	}
 }
+
+*{
+	-webkit-tap-highlight-color: transparent
+}
