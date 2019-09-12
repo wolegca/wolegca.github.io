@@ -30,8 +30,9 @@ div.menu-container {
 	padding-top: 50px;
 	transition: all .5s ease;
 	overflow: hidden;
-	background-color: rgba(255, 255, 255, 0.5);
-	z-index: 1
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 1;
+	box-shadow: 2px 0px 8px black
 }
 
 div.menu-container ul {
@@ -50,18 +51,18 @@ div.menu-container ul li {
 
 div.menu-container ul li * {
 	text-decoration: none;
-	color: black;
+	color: white;
 	display: block;
 	padding: 8px 0 0;
-	transition: all .5s ease;
+	transition: all .3s ease;
 	font-size: 24px;
 	height: 40px;
 	cursor: pointer
 }
 
 div.menu-container ul li *:hover {
-	background-color: rgba(0, 0, 0, .5);
-	color: white
+	background-color: rgba(255, 255, 255, .2);
+	/*color: black*/
 }
 
 div.menu-container ul>li+li:before {
@@ -91,7 +92,7 @@ label[for=menu-control].content-mask {
 	position: relative;
 	width: 50%;
 	height: 100%;
-	background-color: rgba(25, 25, 25, .9);
+	background-color: rgba(0, 0, 0, .5);
 	float: left;
 	z-index: 1;
 	transition: all .5s ease;
@@ -124,7 +125,7 @@ div.content {
 	max-width: 800px;
 	background-color: #fff;
 	border-radius: 15px;
-	opacity: .5;
+	opacity: 1;
 	transition: opacity .5s ease, transform .5s ease;
 	cursor: pointer;
 	padding: 15px;
