@@ -1,6 +1,6 @@
-$(window).on("selectstart", function () {
+window.onselectstart = function () {
 	return false;
-});
-$(window).on("touchstart", function () {
+}
+window.ontouchstart = function(){
 	return false;
-});
+}
