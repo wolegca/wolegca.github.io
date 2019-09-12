@@ -47,17 +47,18 @@ div.menu-container ul li {
 	white-space: nowrap
 }
 
-div.menu-container ul li a {
+div.menu-container ul li * {
 	text-decoration: none;
 	color: #fff;
 	display: block;
 	padding: 8px 0 0;
 	transition: all .5s ease;
 	font-size: 24px;
-	height: 40px
+	height: 40px;
+	cursor: pointer
 }
 
-div.menu-container ul li a:hover {
+div.menu-container ul li *:hover {
 	background-color: rgba(0, 0, 0, .5)
 }
 
@@ -75,7 +76,7 @@ label[for=menu-control].menu-button-container {
 	left: 0;
 	width: 50px;
 	height: 30px;
-	cursor: pointer;
+	cursor: pointer!important;
 	z-index:3
 }
 
@@ -97,7 +98,8 @@ div.menu-button span {
 	height: 3px;
 	background-color: #ccc;
 	display: block;
-	margin: 5px 0 0 3px
+	margin: 5px 0 0 3px;
+	cursor:pointer
 }
 
 
@@ -173,5 +175,6 @@ input#menu-control:checked~label.content-mask{
 	font-size: 24px;
 	background-color:rgba(25, 25, 25,.9);
 	width:100%;
-	z-index:2
+	z-index:2;
+	cursor: default
 }
