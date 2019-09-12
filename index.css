@@ -28,7 +28,7 @@ div.menu-container {
 	width: 0;
 	box-sizing: border-box;
 	padding-top: 50px;
-	transition: all .5s ease;
+	transition: all .35s ease;
 	overflow: hidden;
 	background-color: rgba(0, 0, 0, 0.8);
 	z-index: 1;
@@ -204,9 +204,9 @@ input#menu-control:checked~label.content-mask {
 		margin-right: auto
 	}
 
-	div.content:hover {
+	/* div.content:hover {
 		transform: scale(1.01)
-	}
+	} */
 }
 
 * {
