@@ -2,14 +2,14 @@ body,
 html {
 	margin: 0;
 	padding: 0;
-	height: 100%
+	height: 100%;
+	overflow: hidden;
 }
 
 body {
 	background: url(star-catcher-astronaut-catching-stars-for-research-astronaut.jpg) no-repeat center;
 	background-size: cover;
 	width: 200%;
-	overflow: hidden
 }
 
 input#menu-control {
