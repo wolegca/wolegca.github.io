@@ -28,7 +28,7 @@ div.menu-container {
 	width: 0;
 	box-sizing: border-box;
 	padding-top: 50px;
-	transition: all .35s ease;
+	transition: all .2s ease;
 	overflow: hidden;
 	background-color: rgba(0, 0, 0, 0.8);
 	z-index: 1;
@@ -63,6 +63,10 @@ div.menu-container ul li * {
 div.menu-container ul li *:hover {
 	background-color: rgba(255, 255, 255, .2);
 	/*color: black*/
+}
+
+div.menu-container ul li *:active {
+	background-color: gray;
 }
 
 div.menu-container ul>li+li:before {

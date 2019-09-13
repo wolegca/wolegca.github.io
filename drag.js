@@ -14,7 +14,7 @@
 			})
 			.mouseup(function (event) {
 				M = false;
-				t.fadeTo(20, 1);
+				//t.fadeTo(20, 1);
 			});
 		$(document).mousemove(function (event) {
 			if (M) {

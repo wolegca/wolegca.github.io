@@ -21,12 +21,12 @@ $(function () {
 	$(document.body).on('click','.msg-footer span',function(){
 		var p = $(this).parent().parent();
 		var m = $('.mask');
-		p.css('animation','fadeOut .5s');
-		m.css('animation','fadeOut .5s');
+		p.css('animation','fadeOut .2s forwards');
+		m.css('animation','fadeOut .3s forwards');
 		setTimeout(function(){
 			p.remove();
 			m.hide();
-		},500);
+		},300);
 	});
 })();
 
@@ -46,7 +46,7 @@ var message = new function () {
 			'</div>' +
 			'</div>'
 		$(document.body).append(html);
-		$('.mask').show().css('animation','fadeIn .5s');
+		$('.mask').show().css('animation','fadeIn .2s forwards');
 		$('#mh-'+id).Drag($('#mc-'+id));
 		return id;
 	}
