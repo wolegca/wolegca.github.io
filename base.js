@@ -4,7 +4,7 @@ $(function () {
 	window.ondragstart = block;
 	$('.msg-header').Drag($('.msg-container'));
 	$('.menu-container ul li span').on('click',function(){
-		message.alert('这里是','<div style="text-align:right"><div style="font-size:28px;height:70px;padding-top:40px;text-align:center">AHPU-老中医</div>的博客&nbsp;&nbsp;&nbsp;</div>');
+		message.alert('这里是','<div style="text-align:right"><div style="font-size:28px;height:70px;padding-top:20px;text-align:center">AHPU-老中医</div>的博客&nbsp;&nbsp;&nbsp;</div>');
 	});
 	function block() {
 		return false;
