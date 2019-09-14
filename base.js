@@ -25,7 +25,7 @@ $(function () {
 		m.css('animation','fadeOut .3s forwards');
 		setTimeout(function(){
 			p.remove();
-			m.hide();
+			m.remove();
 		},300);
 	});
 })();
@@ -44,7 +44,8 @@ var message = new function () {
 			'<div class="msg-footer">'+
 			'<span>关闭</span>'+
 			'</div>' +
-			'</div>'
+			'</div>' + 
+			'<div class="mask"></div>';
 		$(document.body).append(html);
 		$('.mask').show().css('animation','fadeIn .2s forwards');
 		$('#mh-'+id).Drag($('#mc-'+id));
