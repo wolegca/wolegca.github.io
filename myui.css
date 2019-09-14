@@ -103,7 +103,8 @@ body {
 	height: 30px;
 	cursor: pointer !important;
 	z-index: 4;
-	padding-left: 10px
+	padding-left: 10px;
+	padding-top:2px
 }
 
 [for=menu-control].menu-button-container:hover span {
@@ -144,18 +145,21 @@ body {
 #menu-control:checked~.menu-button-container .menu-button>span:nth-child(1){
 	transform:rotate(-30deg);
 	width:20px;
-	top:2px
+	top:3px;
+	left:2px
 }
 
 #menu-control:checked~.menu-button-container .menu-button>span:nth-child(2){
-	transform:rotate(180deg);
-	width:30px
+	/* transform:rotate(-180deg); */
+	width:30px;
+	left:3px
 }
 
 #menu-control:checked~.menu-button-container .menu-button>span:nth-child(3){
 	transform:rotate(30deg);
 	width:20px;
-	top:-2px
+	top:-3px;
+	left:2px
 }
 
 .content-border {
