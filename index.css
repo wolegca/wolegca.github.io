@@ -9,11 +9,11 @@
 	content:'';
 	display: block;
 	position:fixed;
-	bottom:0px;
+	top:0px;
 	left:0px;
 	height:150%;
 	width:100%;
-	background: black url(bg.jpg) no-repeat center;
+	background: black url(bg.jpg) no-repeat top;
 	background-size: cover
 }
 
