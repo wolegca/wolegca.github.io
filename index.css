@@ -5,6 +5,26 @@
 	position: relative
 }
 
+.container:before{
+	content:'';
+	display: block;
+	position:fixed;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	background: black url(bg.jpg) no-repeat center;
+	background-size: cover
+}
+
+.clearfix:after{
+	content:'';
+	display: block;
+	height:0px;
+	clear: both;
+	visibility: hidden
+}
+
 .sidebar-border{
 	position: absolute;
 	left:0px;

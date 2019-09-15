@@ -13,8 +13,6 @@ html {
 }
 
 body {
-	background: black url(bg.jpg) repeat-y center;
-	background-size: cover;
 	width: 100%;
 	z-index: 0;
 	position: relative;
@@ -123,7 +121,9 @@ body {
 	z-index: 1;
 	transition: all .2s ease;
 	opacity: 0;
-	visibility: hidden
+	visibility: hidden;
+	top:0px;
+	left:0px
 }
 
 #menu-control:checked~label.content-mask {
@@ -167,7 +167,7 @@ body {
 .content-border {
 	width: 100%;
 	/* height: 100%; */
-	position: absolute;
+	position: relative;
 	padding: 50px 20px 25px;
 	overflow-y: scroll;
 	transition: padding .5s ease;
@@ -329,6 +329,23 @@ body {
 	}
 }
 
+@media screen and (min-width:700px) {
+	input#menu-control:checked+div.menu-container {
+		width: 350px;
+		left: 0
+	}
+
+	div.content {
+		margin-left: auto;
+		margin-right: auto
+	}
+
+	.content-border{
+		padding-left: 260px;
+	}
+
+}
+
 @media screen and (max-width:700px) {
 	body {
 		width: 100%
@@ -350,23 +367,22 @@ body {
 	div.content-border {
 		padding: 50px 5px 25px;
 	}
-}
 
-@media screen and (min-width:700px) {
-	input#menu-control:checked+div.menu-container {
-		width: 350px;
-		left: 0
+	.msg-footer span{
+		display:block;
+		position: absolute;
+		height:100%;
+		width:100%;
+		top:0px;
+		left:0px;
+		text-align: center;
+		padding-top:10px;
+		border-radius: 0 0 15px 15px
 	}
 
-	div.content {
-		margin-left: auto;
-		margin-right: auto
+	.msg-footer span:active{
+		background-color:rgba(255,255,255,0.5)
 	}
-
-	.content-border{
-		padding-left: 260px;
-	}
-
 }
 
 @media screen and (max-width:480px) {
