@@ -10,7 +10,6 @@
 				Rx = event.pageX - (parseInt(target.css("left")) || 0);
 				Ry = event.pageY - (parseInt(target.css("top")) || 0);
 				M = true;
-				scaleChanged = false;
 			})
 			.mouseup(function (event) {
 				M = false;
@@ -23,7 +22,6 @@
 					left: event.pageX - Rx
 				});
 			}
-			scaleChanged = true;
 		});
 	}
 })(document);

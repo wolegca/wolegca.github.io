@@ -27,19 +27,26 @@ $(function () {
 			p.remove();
 			m.remove();
 		},300);
+		message.alertCode = '';
 	});
 })();
 
 var message = new function () {
+	this.alertCode = '';
 	this.alert = function (header, content) {
+		if(message.alertCode){
+			console.warn('存在未关闭的提示框');
+			return;
+		}
+		
 		var id = uuid();
 		var html =
 			'<div class="msg-container" id="mc-' + id + '">' +
 			'<div class="msg-header" id="mh-'+id+'">' +
-			header +
+			(header || '提示框') +
 			'</div>' +
 			'<div class="msg-content">' +
-			content +
+			(content || '提示内容') +
 			'</div>' +
 			'<div class="msg-footer">'+
 			'<span>关闭</span>'+
@@ -47,9 +54,9 @@ var message = new function () {
 			'</div>' + 
 			'<div class="mask"></div>';
 		$(document.body).append(html);
-		$('.mask').show().css('animation','fadeIn .2s forwards');
+		$('.mask').css('animation','fadeIn .2s forwards');
 		$('#mh-'+id).Drag($('#mc-'+id));
-		return id;
+		message.alertCode = id;
 	}
 }
 

@@ -7,54 +7,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="myui.css">
+    <link rel="stylesheet" href="highlight.css">
     <title>LAOZHONGYI BLOG</title>
 </head>
 
 <body>
-    <div id="blog-title">AHPU 老中医的博客</div>
-    <input type="checkbox" id="menu-control">
-    <div class="menu-container">
-        <ul>
-            <li><a href="/">首页</a></li>
-            <li><span>关于</span></li>
-            <li><label for="menu-control">返回</label></li>
-        </ul>
+    <div class="container">
+
+
+        <div id="blog-title">AHPU 老中医的博客</div>
+        <input type="checkbox" id="menu-control">
+        <div class="menu-container">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><span>关于</span></li>
+                <li><label for="menu-control">返回</label></li>
+            </ul>
+        </div>
+        <label for="menu-control" class="content-mask"></label>
+        <label for="menu-control" class="menu-button-container">
+            <div class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+
+        <div class="content-border">
+            <div class="content">
+                <span>笔记1：首字下沉的技巧</span>
+                <p>在浏览网页的时候我们时常会看到一段文字的第一个字有下沉的效果。那么是如何实现的那？下面小编给大家分享一下CSS如何实现首字下沉效果</p>
+                <p>首先准备一个HTML文档，然后在文档中准备好一段文字，如下图所示</p>
+                <img src="images/note1/1.jpg" alt="截图1">
+                <p>接下来就去除浏览器的间隙，将margin以及padding都设置为0。然后设置body的样式，如下图所示设置字体以及字体颜色样式接下来就是设置文字段落的样式了，设置行间距，段落宽度等。然后定位到p元素的first-child，然后找到其第一个字，这里用到的是first-letter，如下图所示
+                </p>
+                <img src="images/note1/2.jpg" alt="截图2">
+                <p>最后我们运行以后，你会看到如下图所示的效果，第一个字是不是下沉了</p>
+                <p>综上所述，实现首字下沉效果主要运用了CSS的first-letter选择器，给其添加样式即可</p>
+            </div>
+            <div class="content">
+                <span>笔记2：css选择器</span>
+                <p>有时候我们会想选择众多兄弟元素中特定次序的元素，这个怎么通过css来选中呢？这里有个技巧，就是巧用css的child选择器</p>
+                <p>1、first-child</p>
+                <p>first-child表示选择列表中的第一个标签。代码如下：
+                    <pre><code></code></pre>
+            </div>
+            <div class="content">
+                <span>笔记3</span>
+
+            </div>
+            <div class="content">
+                <span>笔记4</span>
+
+            </div>
+            <div class="sidebar-border">
+                <div class="sidebar">
+                    <div>
+                        往期回顾
+                    </div>
+                    <div>
+                        content 2
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <label for="menu-control" class="content-mask"></label>
-    <label for="menu-control" class="menu-button-container">
-        <div class="menu-button">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </label>
-
-    <div class="content-border">
-        <div class="content">
-            <span>笔记1</span>
-            <p>在浏览网页的时候我们时常会看到一段文字的第一个字有下沉的效果。那么是如何实现的那？下面小编给大家分享一下CSS如何实现首字下沉效果</p>
-            <p>首先准备一个HTML文档，然后在文档中准备好一段文字，如下图所示</p>
-            <img src="images/note1/1.jpg" alt="截图1">
-            <p>接下来就去除浏览器的间隙，将margin以及padding都设置为0。然后设置body的样式，如下图所示设置字体以及字体颜色样式接下来就是设置文字段落的样式了，设置行间距，段落宽度等。然后定位到p元素的first-child，然后找到其第一个字，这里用到的是first-letter，如下图所示
-            </p>
-            <img src="images/note1/2.jpg" alt="截图2">
-            <p>最后我们运行以后，你会看到如下图所示的效果，第一个字是不是下沉了</p>
-            <p>综上所述，实现首字下沉效果主要运用了CSS的first-letter选择器，给其添加样式即可</p>
-        </div>
-        <div class="content">
-            <span>笔记2</span>
-
-        </div>
-        <div class="content">
-            <span>笔记3</span>
-
-        </div>
-        <div class="content">
-            <span>笔记4</span>
-
-        </div>
-    </div>
-
     <!-- <div class="mask"></div> -->
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="drag.js"></script>
