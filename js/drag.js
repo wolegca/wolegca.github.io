@@ -1,6 +1,7 @@
 (function (document) {
-	//Usage: $("#id").Drag() 
+	//Usage: $("#from").Drag($("#target")) 
 	//Author: hooyes
+	//Modified by: 老中医
 	$.fn.Drag = function (target) {
 		var M = false;
 		var Rx, Ry;
