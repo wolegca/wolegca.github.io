@@ -139,28 +139,30 @@ body {
 	position: relative;
 	margin: 5px 0 0 3px;
 	cursor: pointer;
-	transition: all .2s ease;
+	transition: all .2s ease-in;
 	left:0px;
 	top:0px
 }
 
 #menu-control:checked~.menu-button-container .menu-button>span:nth-child(1){
-	transform:rotate(-30deg);
-	width:20px;
-	top:3px;
+	transform:rotate(45deg);
+	width:30px;
+	top:8px;
 	left:2px
 }
 
 #menu-control:checked~.menu-button-container .menu-button>span:nth-child(2){
 	/* transform:rotate(-180deg); */
-	width:30px;
-	left:3px
+	width:0px;
+	/* height:0px; */
+	/* opacity: 0; */
+	left:20px
 }
 
 #menu-control:checked~.menu-button-container .menu-button>span:nth-child(3){
-	transform:rotate(30deg);
-	width:20px;
-	top:-3px;
+	transform:rotate(-45deg);
+	width:30px;
+	top:-8px;
 	left:2px
 }
 
@@ -178,7 +180,7 @@ body {
 .content {
 	min-height: 200px;
 	max-width: 1000px;
-	background-color: rgba(255, 255, 255, .5);
+	background-color: rgba(255, 255, 255, .8);
 	border-radius: 15px;
 	opacity: 1;
 	transition: opacity .5s ease, transform .5s ease;
@@ -239,7 +241,7 @@ body {
 	z-index: 999;
 	text-overflow: ellipsis;
 	word-break: break-word;
-	transition:all .2s ease
+	/* transition:all .2s ease */
 }
 
 .msg-header {
@@ -285,7 +287,7 @@ body {
 
 .msg-footer span {
 	cursor: pointer;
-	transition: all .1s ease;
+	transition: all .2s ease;
 	font-size: 16px;
 	padding: 3px 8px;
 }
@@ -382,7 +384,9 @@ body {
 	}
 
 	.msg-footer span:active{
-		background-color:rgba(255,255,255,0.5)
+		background-color:black;
+		border-radius: 0px 0px 10px 13px;
+		color:white
 	}
 }
 

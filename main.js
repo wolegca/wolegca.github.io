@@ -1,11 +1,13 @@
-$.ajax({
-	type:"GET",
-	url:"https://javacloud.bmob.cn/0104a7ae840e3555/counter?name=wcx",
-	async:true,
-	success:function(res){
-		message.alert(res);
-	},
-	error:function(){
-		message.alert('error!');
-	}
-});
+// $.ajax({
+// 	type:"GET",
+// 	url:"https://javacloud.bmob.cn/0104a7ae840e3555/counter?name=wcx",
+// 	async:true,
+// 	success:function(res){
+// 		message.alert('提示',res);
+// 	},
+// 	error:function(){
+// 		message.alert('提示','error!');
+// 	}
+// });
+
+console.log('\n' + base64.decode('4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paE4paR4paRCuKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkOKWiOKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWhOKWgOKWkuKWjOKWkQrilpHilpHilpHilpHilpHilpHilpHilpHilpDiloDilpLilojilpHilpHilpHilpHilpHilpHilpHilpHiloTiloDilpLilpLilpLilpAK4paR4paR4paR4paR4paR4paR4paR4paQ4paE4paA4paS4paS4paA4paA4paA4paA4paE4paE4paE4paA4paS4paS4paS4paS4paS4paQCuKWkeKWkeKWkeKWkeKWkeKWhOKWhOKWgOKWkuKWkeKWkuKWkuKWkuKWkuKWkuKWkuKWkuKWkuKWkuKWiOKWkuKWkuKWhOKWiOKWkuKWkArilpHilpHilpHiloTiloDilpLilpLilpLilpHilpHilpHilpLilpLilpLilpHilpHilpHilpLilpLilpLiloDilojilojiloDilpLilowK4paR4paR4paQ4paS4paS4paS4paE4paE4paS4paS4paS4paS4paR4paR4paR4paS4paS4paS4paS4paS4paS4paS4paA4paE4paS4paSCuKWkeKWkeKWjOKWkeKWkeKWjOKWiOKWgOKWkuKWkuKWkuKWkuKWkuKWhOKWgOKWiOKWhOKWkuKWkuKWkuKWkuKWkuKWkuKWkuKWiOKWkuKWkArilpHilpDilpHilpHilpHilpLilpLilpLilpLilpLilpLilpLilpLilozilojilojiloDilpLilpLilpHilpHilpHilpLilpLilpLiloDiloQK4paR4paM4paR4paS4paE4paI4paI4paE4paS4paS4paS4paS4paS4paS4paS4paS4paS4paR4paR4paR4paR4paR4paR4paS4paS4paS4paSCuKWgOKWkuKWgOKWkOKWhOKWiOKWhOKWiOKWjOKWhOKWkeKWgOKWkuKWkuKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkuKWkuKWkgrljZXouqvni5flsLHov5nmoLfpu5jpu5jlnLDnnIvnnYDkvaDvvIzkuIDlj6Xor53kuZ/kuI3or7TjgII='));
