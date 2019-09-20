@@ -17,6 +17,10 @@ $.ajax({
 	dataType: "json",
 	success: function (response) {
 		var lastIndex = response.length - 1;
+		var i;
+		for(i in response){
+			$('.sidebar').append($('<div>').append(i));
+		}
 
 		if (response[lastIndex]['hasCode'] == true)
 			loadScript('content/js/' + response[lastIndex]['date'] + '.js');
