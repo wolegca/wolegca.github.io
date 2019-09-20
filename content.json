@@ -1,7 +1,12 @@
 [
 	{
-		"title": "笔记1",
+		"title": "笔记1：首字下沉的技巧",
 		"date": "2019-09-19$1",
+		"hasCode": false
+	},
+	{
+		"title": "笔记2：让新版Chrome支持本地跨域请求调试",
+		"date": "2019-09-20$1",
 		"hasCode": false
 	}
 ]

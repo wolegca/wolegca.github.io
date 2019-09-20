@@ -6,7 +6,7 @@
 		dataType: "json",
 		success: function (response) {
 			
-			listContent(response);
+			listContent(response,index);
 
 			if (response[index]['hasCode'])
 				loadScript('content/js/' + response[index]['date'] + '.js');
