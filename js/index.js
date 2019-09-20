@@ -19,7 +19,7 @@ $.ajax({
 		var lastIndex = response.length - 1;
 		var i;
 		for(i in response){
-			$('.sidebar').append($('<div>').append(i));
+			$('.sidebar').append($('<div>').append(response[i]['title']));
 		}
 
 		if (response[lastIndex]['hasCode'] == true)
