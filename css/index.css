@@ -1,61 +1,39 @@
-.container{
-	max-width: 1440px;
-	margin:0 auto;
-	position: relative
+div.sidebar div:nth-of-type(n+1) {
+	margin-bottom: 10px
 }
 
-.container:before{
-	content:'';
+div.sidebar div:nth-of-type(n+1) *{
 	display: block;
-	position:fixed;
-	top:0px;
-	left:0px;
-	height:150%;
-	width:100%;
-	background: black url(../images/bg.jpg) no-repeat top;
-	background-size: cover
+	font-size: 16px;
+	padding: 2px 0px;
+	margin: 3px 0px
 }
 
-.clearfix:after{
-	content:'';
-	display: block;
-	height:0px;
-	clear: both;
-	visibility: hidden
+div.sidebar div:nth-of-type(n+1) span{
+	font-weight: bold;
+	font-size: 18px
 }
 
-.sidebar-border{
-	position: absolute;
-	left:0px;
-	top:0px;
-	display: block;
-	width:250px;
-	background-color: transparent;
-	padding-top:50px;
-	overflow-x:hidden;
-	padding-bottom: 10px;
-	padding-left: 10px
+div.sidebar div:nth-of-type(n+1) a{
+	text-decoration: none;
+	transition:all ease .2s;
+	padding-left: 2px;
+	border-radius:5px;
+	box-shadow: 1px 1px 2px #999;
+	min-height: 50px;
+	padding:15px 5px;
 }
 
-.sidebar{
-	position: relative;
-	display: block;
-	width:100%;
-	background-color:rgba(255,255,255,.8);
-	border-radius: 15px;
-	padding:15px
+div.sidebar div:nth-of-type(n+1) a:visited{
+	color:black
 }
 
-.sidebar div:first-child{
-	font-size: 20px;
-	font-weight: bold
+div.sidebar div:nth-of-type(n+1) a:hover{
+	color:green;
+	box-shadow: 2px 2px 5px #999;
+	transform:scale(1.05)
 }
 
-@media screen and (max-width:700px){
-	.sidebar-border{
-		position: relative;
-		width:100%;
-		height:auto;
-		padding:0px
-	}
+div.sidebar div:nth-of-type(n+1) a:active{
+	color:red
 }

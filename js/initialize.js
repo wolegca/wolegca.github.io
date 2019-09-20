@@ -121,7 +121,7 @@ function listContent(json, num) {
 		sidebar = $('.sidebar');
 	for (; i <= len; i++) {
 		index = len - i;
-		if (len - i !== num) {
+		if (index != num) {
 			sidebar.append($('<div>').append($('<a>').attr('href', 'view.html?i=' + index).append(json[index]['title'])));
 		} else {
 			sidebar.append($('<div>').append($('<span>').append(' · ' + json[index]['title'])));

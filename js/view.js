@@ -2,11 +2,11 @@
 	var index = getQueryString('i');
 	$.ajax({
 		type: "GET",
-		url: "content.json",
+		url: "content.json?timestamp=" + (new Date()).valueOf(),
 		dataType: "json",
 		success: function (response) {
-			
-			listContent(response,index);
+
+			listContent(response, index);
 
 			if (response[index]['hasCode'])
 				loadScript('content/js/' + response[index]['date'] + '.js');

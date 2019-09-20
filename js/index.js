@@ -10,15 +10,15 @@
 // 	}
 // });
 
-
+var index = getQueryString('i');
 $.ajax({
 	type: "GET",
-	url: "content.json",
+	url: "content.json?timestamp=" + (new Date()).valueOf(),
 	dataType: "json",
 	success: function (response) {
 		var lastIndex = response.length - 1;
-		
-		listContent(response);
+
+		listContent(response, lastIndex);
 
 		if (response[lastIndex]['hasCode'])
 			loadScript('content/js/' + response[lastIndex]['date'] + '.js');
