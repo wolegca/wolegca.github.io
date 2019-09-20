@@ -170,7 +170,6 @@ body {
 	width: 100%;
 	position: relative;
 	padding: 50px 20px 25px;
-	overflow-y: scroll;
 	transition: padding .5s ease .1s;
 	left: 50%;
 	transform:translateX(-50%)

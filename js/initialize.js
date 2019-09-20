@@ -78,6 +78,29 @@ var message = new function () {
 	}
 }
 
+function loadScript(url, callback){
+	var script = document.createElement('script');
+	script.src = url;
+	document.head.appendChild(script);
+	if(callback)
+		callback();
+}
+
+function loadCss(url, callback){
+	var css = document.createElement('link');
+	css.rel = 'stylesheet';
+	css.href = url;
+	document.head.appendChild(css);
+	if(callback)
+		callback();
+}
+
+function appendContent(content){
+	var div = $('<div class="content">');
+	div.append(content);
+	$('.content-border').prepend(div);
+}
+
 function uuid() {
 	return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
 		var r = Math.random() * 16 | 0,
@@ -191,3 +214,5 @@ function Base64() {
 		return string;
 	}
 }
+
+console.log('\n' + base64.decode('4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paR4paE4paR4paRCuKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkOKWiOKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWhOKWgOKWkuKWjOKWkQrilpHilpHilpHilpHilpHilpHilpHilpHilpDiloDilpLilojilpHilpHilpHilpHilpHilpHilpHilpHiloTiloDilpLilpLilpLilpAK4paR4paR4paR4paR4paR4paR4paR4paQ4paE4paA4paS4paS4paA4paA4paA4paA4paE4paE4paE4paA4paS4paS4paS4paS4paS4paQCuKWkeKWkeKWkeKWkeKWkeKWhOKWhOKWgOKWkuKWkeKWkuKWkuKWkuKWkuKWkuKWkuKWkuKWkuKWkuKWiOKWkuKWkuKWhOKWiOKWkuKWkArilpHilpHilpHiloTiloDilpLilpLilpLilpHilpHilpHilpLilpLilpLilpHilpHilpHilpLilpLilpLiloDilojilojiloDilpLilowK4paR4paR4paQ4paS4paS4paS4paE4paE4paS4paS4paS4paS4paR4paR4paR4paS4paS4paS4paS4paS4paS4paS4paA4paE4paS4paSCuKWkeKWkeKWjOKWkeKWkeKWjOKWiOKWgOKWkuKWkuKWkuKWkuKWkuKWhOKWgOKWiOKWhOKWkuKWkuKWkuKWkuKWkuKWkuKWkuKWiOKWkuKWkArilpHilpDilpHilpHilpHilpLilpLilpLilpLilpLilpLilpLilpLilozilojilojiloDilpLilpLilpHilpHilpHilpLilpLilpLiloDiloQK4paR4paM4paR4paS4paE4paI4paI4paE4paS4paS4paS4paS4paS4paS4paS4paS4paS4paR4paR4paR4paR4paR4paR4paS4paS4paS4paSCuKWgOKWkuKWgOKWkOKWhOKWiOKWhOKWiOKWjOKWhOKWkeKWgOKWkuKWkuKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkeKWkuKWkuKWkgrljZXouqvni5flsLHov5nmoLfpu5jpu5jlnLDnnIvnnYDkvaDvvIzkuIDlj6Xor53kuZ/kuI3or7TjgII='));
