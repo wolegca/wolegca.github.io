@@ -42,7 +42,8 @@ var message = new function () {
 			return;
 		}
 
-		var arg1 = arguments[0], arg2 = arguments[1];
+		var arg1 = arguments[0],
+			arg2 = arguments[1];
 
 		if (arguments.length <= 1) {
 			header = '提示';
@@ -78,27 +79,54 @@ var message = new function () {
 	}
 }
 
-function loadScript(url, callback){
-	var script = document.createElement('script');
+function loadScript(url, callback) {
+	var script = document.createElement("script")
+	if (script.readyState) { //IE
+		script.onreadystatechange = function () {
+			if (script.readyState == "loaded" || script.readyState == "complete") {
+				script.onreadystatechange = null;
+				if(callback)
+					callback();
+			}
+		};
+	} else { //Others
+		script.onload = function () {
+			if(callback)
+				callback();
+		};
+	}
 	script.src = url;
-	document.head.appendChild(script);
-	if(callback)
-		callback();
+	document.getElementsByTagName("head")[0].appendChild(script);
 }
 
-function loadCss(url, callback){
+function loadCss(url, callback) {
 	var css = document.createElement('link');
 	css.rel = 'stylesheet';
 	css.href = url;
 	document.head.appendChild(css);
-	if(callback)
+	if (callback)
 		callback();
 }
 
-function appendContent(content){
+function appendContent(content) {
 	var div = $('<div class="content">');
 	div.append(content);
 	$('.content-border').prepend(div);
+}
+
+function listContent(json){
+	var i, sidebar = $('.sidebar');
+	for(i in json){
+		sidebar.append($('<div>').append($('<a>').attr('href','view.html?i=' + i).append(json[i]['title'])));
+	}
+}
+
+function getQueryString(param) {
+	var reg = new RegExp("(^|&)" + param + "=([^&]*)(&|$)");
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null)
+		return decodeURI(r[2]);
+	return '';
 }
 
 function uuid() {

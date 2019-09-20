@@ -17,19 +17,17 @@ $.ajax({
 	dataType: "json",
 	success: function (response) {
 		var lastIndex = response.length - 1;
-		var i;
-		for(i in response){
-			$('.sidebar').append($('<div>').append(response[i]['title']));
-		}
+		
+		listContent(response);
 
-		if (response[lastIndex]['hasCode'] == true)
+		if (response[lastIndex]['hasCode'])
 			loadScript('content/js/' + response[lastIndex]['date'] + '.js');
 
 		$.ajax({
 			type: "GET",
 			url: 'content/html/' + response[lastIndex]['date'] + '.html',
-			success: function (response) {
-				appendContent(response);
+			success: function (res) {
+				appendContent(res);
 			}
 		});
 	}
