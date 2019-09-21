@@ -32,7 +32,13 @@ $.ajax({
 			url: 'content/html/' + response[lastIndex]['date'] + '.html',
 			success: function (res) {
 				appendContent(res);
+			},
+			error:function(){
+				message.alert('出错了!','网络连接出错了，请稍后再试');
 			}
 		});
+	},
+	error:function(){
+		message.alert('出错了!','网络连接出错了，请稍后再试');
 	}
 });
