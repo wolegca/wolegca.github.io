@@ -5,7 +5,9 @@
 		url: "content.json?timestamp=" + (new Date()).valueOf(),
 		dataType: "json",
 		success: function (response) {
-
+			
+			if (response.length <= index)
+				return;
 			listContent(response, index);
 
 			if (response[index]['hasCode'])

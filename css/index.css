@@ -16,7 +16,7 @@ div.sidebar div:nth-of-type(n+1) span{
 
 div.sidebar div:nth-of-type(n+1) a{
 	text-decoration: none;
-	transition:all ease .2s;
+	transition:all ease .1s;
 	padding-left: 2px;
 	border-radius:5px;
 	box-shadow: 1px 1px 2px #999;

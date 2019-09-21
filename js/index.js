@@ -18,6 +18,10 @@ $.ajax({
 	success: function (response) {
 		var lastIndex = response.length - 1;
 
+		if(response.length <= index){
+			return;
+		}
+
 		listContent(response, lastIndex);
 
 		if (response[lastIndex]['hasCode'])
