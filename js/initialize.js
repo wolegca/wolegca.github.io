@@ -29,10 +29,13 @@ $(function () {
 			m.remove();
 		}, 300);
 		message.alertCode = '';
+		if(message.callback)
+			message.callback();
 	});
 })();
 
 var message = new function () {
+	this.callback = undefined;
 	this.alertCode = '';
 	this.alert = function () {
 
@@ -43,7 +46,8 @@ var message = new function () {
 		}
 
 		var arg1 = arguments[0],
-			arg2 = arguments[1];
+			arg2 = arguments[1],
+			callback = arguments[2];
 
 		if (arguments.length <= 1) {
 			header = '提示';
@@ -53,11 +57,13 @@ var message = new function () {
 			content = (arg2 === undefined ? '提示内容' : arg2);
 		}
 
-		message.appendHtml(header, content);
+		message.callback = callback;
+		appendHtml(header, content);
+		
 
 	}
 
-	this.appendHtml = function (header, content) {
+	function appendHtml (header, content) {
 		var id = uuid();
 		var html =
 			'<div class="msg-container" id="mc-' + id + '">' +
