@@ -1,7 +1,7 @@
 (function () {
-	var index = getQueryString('i');
-	if (index == '') {
-		message.alert('发生错误', '缺少参数，请检查URL是否正确', function () {
+	var index = window.parseInt(getQueryString('i'));
+	if (window.isNaN(index)) {
+		message.alert('发生错误', '缺少参数或参数类型不正确，请检查URL是否正确', function () {
 			window.location.replace('/');
 		});
 		return;
