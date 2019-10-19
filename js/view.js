@@ -1,5 +1,11 @@
 (function () {
 	var index = getQueryString('i');
+	if (index == '') {
+		message.alert('发生错误', '缺少参数，请检查URL是否正确', function () {
+			window.location.replace('/');
+		});
+		return;
+	}
 	$.ajax({
 		type: "GET",
 		url: "content.json?timestamp=" + (new Date()).valueOf(),
