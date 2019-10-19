@@ -5,7 +5,7 @@
 		url: "content.json?timestamp=" + (new Date()).valueOf(),
 		dataType: "json",
 		success: function (response) {
-			
+
 			if (response.length <= index)
 				return;
 			listContent(response, index);
@@ -19,13 +19,13 @@
 				success: function (res) {
 					appendContent(res);
 				},
-				error:function(){
-					message.alert('出错了!','网络连接出错了，请稍后再试');
+				error: function () {
+					message.alert('出错了!', '网络连接出错了，请稍后再试');
 				}
 			});
 		},
-		error:function(){
-			message.alert('出错了!','网络连接出错了，请稍后再试');
+		error: function () {
+			message.alert('出错了!', '网络连接出错了，请稍后再试');
 		}
 	});
 })();

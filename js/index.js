@@ -18,7 +18,7 @@ $.ajax({
 	success: function (response) {
 		var lastIndex = response.length - 1;
 
-		if(response.length <= index){
+		if (response.length <= index) {
 			return;
 		}
 
@@ -33,12 +33,12 @@ $.ajax({
 			success: function (res) {
 				appendContent(res);
 			},
-			error:function(){
-				message.alert('出错了!','网络连接出错了，请稍后再试');
+			error: function () {
+				message.alert('出错了!', '网络连接出错了，请稍后再试');
 			}
 		});
 	},
-	error:function(){
-		message.alert('出错了!','网络连接出错了，请稍后再试');
+	error: function () {
+		message.alert('出错了!', '网络连接出错了，请稍后再试');
 	}
 });
