@@ -53,11 +53,17 @@ $(function () {
 	$(document.body).on('click', '.msg-footer span', function () {
 		var p = $(this).parent().parent();
 		var m = $('.mask');
-		p.css('animation', 'fadeOut .2s forwards');
-		m.css('animation', 'fadeOut .3s forwards');
+		$('.msg-content').animate({
+			height: '0px',
+			padding: '0px 10px'
+		}, 300);
 		setTimeout(function () {
-			p.remove();
-			m.remove();
+			p.css('animation', 'fadeOut .2s forwards');
+			m.css('animation', 'fadeOut .3s forwards');
+			setTimeout(function () {
+				p.remove();
+				m.remove();
+			}, 300);
 		}, 300);
 		message.alertCode = '';
 		if (message.callback)

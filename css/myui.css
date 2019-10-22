@@ -228,7 +228,7 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	min-height: 150px;
+	/* min-height: 150px; */
 	min-width: 250px;
 	max-width: 460px;
 	color: white;
@@ -241,6 +241,7 @@ body {
 	z-index: 999;
 	text-overflow: ellipsis;
 	word-break: break-word;
+	background-color: rgb(50, 50, 50);
 }
 
 .msg-header {
@@ -261,12 +262,16 @@ body {
 	display: block;
 	position: relative;
 	width: 100%;
-	min-height: 70px;
-	background-color: rgb(50, 50, 50);
+	/* min-height: 70px; */
+	max-height:0px;
+	/* background-color: rgb(50, 50, 50); */
 	cursor: default;
 	padding: 10px;
 	text-overflow: ellipsis;
-	word-break: break-word
+	word-break: break-word;
+	animation: msgSlideOut 2s linear forwards,fadeIn .5s linear forwards;
+	opacity: 0;
+	overflow: hidden;
 }
 
 .msg-footer {
@@ -494,6 +499,15 @@ body {
 
 	to {
 		opacity: 0
+	}
+}
+
+@keyframes msgSlideOut {
+	from {
+		max-height: 0px;
+	}
+	to {
+		max-height:760px;
 	}
 }
 
