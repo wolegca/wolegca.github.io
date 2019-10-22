@@ -67,7 +67,9 @@ $(function () {
 		}, 300);
 		message.alertCode = '';
 		if (message.callback)
-			message.callback();
+			setTimeout(function () {
+				message.callback();
+			}, 600);
 	});
 })();
 
