@@ -1,12 +1,9 @@
 <span>console下文字颜色的实现</span>
 <p>程序在console下输出的文字一般默认是白色或者是其他用户自定义的统一颜色</p>
-<img src="" alt="截图1">
+<img src="images/note3/1.jpg" alt="截图1">
 <p>改变文字的颜色一般要用到颜色转义字符\e或者是\033,如</p>
 <pre>
-	<code>
-			typedef enum colors
-			{
-				"<span style="color:blue">\e</span>[0;31;32m<span style="color:yellow">%s</span><span style="color:blue">\e</span>[0m"
-			} colors;
-	</code>
+<code>
+"<span style="color:blue">\e</span>[0;31;32m<span style="color:yellow">%s</span><span style="color:blue">\e</span>[0m"
+</code>
 </pre>
