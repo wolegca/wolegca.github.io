@@ -34,7 +34,9 @@ body {
 	background-color: rgba(25, 25, 25, .9);
 	width: 100%;
 	z-index: 4;
-	cursor: default
+	cursor: default;
+	backdrop-filter: blur(15px);
+	padding: 5px 0px;
 }
 
 .menu-container {
@@ -181,7 +183,7 @@ body {
 	min-height: 200px;
 	max-width: 1000px;
 	background-color: rgba(100, 100, 100, .3);
-	backdrop-filter: blur(8px);
+	backdrop-filter: blur(15px);
 	border-radius: 15px;
 	opacity: 1;
 	transition: opacity .5s ease, transform .5s ease;
@@ -382,7 +384,7 @@ body {
 	padding: 15px;
 	cursor: default;
 	color: rgb(233,233,233);
-	backdrop-filter: blur(8px);
+	backdrop-filter: blur(15px);
 }
 
 .sidebar div:first-child {

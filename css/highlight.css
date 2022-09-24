@@ -19,7 +19,7 @@ code {
 	padding-right: 15px;
 }
 
-li {
+code li {
 	padding-left: 15px;
 	padding-right: 15px;
 	border-left: 1px solid grey;
