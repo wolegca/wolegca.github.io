@@ -1,7 +1,7 @@
 $(function () {
-	window.onselectstart = block;
-	window.ontouchstart = block;
-	window.ondragstart = block;
+	// window.onselectstart = block;
+	// window.ontouchstart = block;
+	// window.ondragstart = block;
 	var topElem = $('.top'),
 		isCssed = false,
 		docTop;
@@ -157,6 +157,7 @@ function appendContent(content) {
 	var div = $('<div class="content">');
 	div.append(content);
 	$('.content-border').prepend(div);
+	$('.loading').remove();
 }
 
 function listContent(json, num) {
@@ -172,12 +173,11 @@ function listContent(json, num) {
 			sidebar.append($('<div>').append($('<span>').append(' · ' + json[index]['title'])));
 		}
 	}
-	$('.loading').remove();
 }
 
 function getQueryString(param) {
 	var reg = new RegExp("(^|&)" + param + "=([^&]*)(&|$)");
-	var r = window.location.search.substr(1).match(reg);
+	var r = window.location.search.substring(1).match(reg);
 	if (r != null)
 		return decodeURI(r[2]);
 	return '';

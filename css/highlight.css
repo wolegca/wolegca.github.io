@@ -5,3 +5,14 @@
 .css-value{
 	color:#090!important
 }
+
+pre {
+	background-color: #252525;
+	color:whitesmoke;
+	padding: 5px 15px;
+	font-size: medium;
+}
+
+code {
+	font-family: 'Menlo', 'Monaco', 'Consolas'
+}
