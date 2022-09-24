@@ -22,14 +22,15 @@ div.sidebar div:nth-of-type(n+1) a{
 	box-shadow: 1px 1px 2px #999;
 	min-height: 50px;
 	padding:15px 5px;
+	color: white
 }
 
 div.sidebar div:nth-of-type(n+1) a:visited{
-	color:black
+	color: white
 }
 
 div.sidebar div:nth-of-type(n+1) a:hover{
-	color:green;
+	color:rgb(190, 0, 190);
 	box-shadow: 2px 2px 5px #999;
 	transform:scale(1.05)
 }

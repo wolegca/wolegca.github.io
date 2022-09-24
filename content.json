@@ -2,21 +2,26 @@
 	{
 		"title": "笔记1：首字下沉的技巧",
 		"date": "2019-09-19$1",
-		"hasCode": false
+		"type": "html"
 	},
 	{
 		"title": "笔记2：让新版Chrome支持本地跨域请求调试",
 		"date": "2019-09-20$1",
-		"hasCode": false
+		"type": "html"
 	},
 	{
 		"title":"笔记3：console下文字颜色的实现",
 		"date":"2019-12-29$1",
-		"hasCode": false
+		"type": "html"
 	},
 	{
 		"title":"笔记4：Visual Studio Code快捷键小总结",
 		"date":"2021-03-27$1",
-		"hasCode": false
+		"type": "html"
+	},
+	{
+		"title":"MarkDown 加入测试",
+		"date":"2022-09-24$1",
+		"type":"markdown"
 	}
 ]

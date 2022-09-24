@@ -11,8 +11,22 @@ pre {
 	color:whitesmoke;
 	padding: 5px 15px;
 	font-size: medium;
+	border-radius: 5px;
 }
 
 code {
-	font-family: 'Menlo', 'Monaco', 'Consolas'
+	font-family: 'Menlo', 'Monaco', 'Consolas';
+	padding-right: 15px;
+}
+
+li {
+	padding-left: 15px;
+	padding-right: 15px;
+	border-left: 1px solid grey;
+	line-height: 1.5em;
+}
+
+b.name {
+	color: orange;
+	font-size: larger;
 }

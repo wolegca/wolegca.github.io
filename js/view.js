@@ -16,9 +16,6 @@
 				return;
 			listContent(response, index);
 
-			if (response[index]['hasCode'])
-				loadScript('content/js/' + response[index]['date'] + '.js');
-
 			$.ajax({
 				type: "GET",
 				url: 'content/html/' + response[index]['date'] + '.html',

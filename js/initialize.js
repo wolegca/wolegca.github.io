@@ -8,7 +8,7 @@ $(function () {
 	toggleTop();
 	$('.msg-header').Drag($('.msg-container'));
 	$('.menu-container ul li span').on('click', function () {
-		message.alert('这里是', '<div style="text-align:right"><div style="font-size:28px;height:70px;padding-top:20px;text-align:center">AHPU-老中医</div>的博客&nbsp;&nbsp;&nbsp;</div>');
+		message.alert('这里是', '<div style="text-align:right"><div style="font-size:28px;height:70px;padding-top:20px;text-align:center">无处安心</div>的博客&nbsp;&nbsp;&nbsp;</div>');
 	});
 	topElem.on('click', function () {
 		$('html,body').animate({
@@ -167,13 +167,44 @@ function listContent(json, num) {
 		sidebar = $('.sidebar');
 	for (; i <= len; i++) {
 		index = len - i;
+		type = json[index]['type'];
 		if (index != num) {
-			sidebar.append($('<div>').append($('<a>').attr('href', 'view.html?i=' + index).append(json[index]['title'])));
+			sidebar.append(
+				$('<div>').append($('<a>')
+					.attr('href', `${type == 'html' ? 'view' : 'preview'}.html?i=${index}&type=${type}&date=${json[index]['date']}`)
+					.append(json[index]['title']))
+			);
 		} else {
 			sidebar.append($('<div>').append($('<span>').append(' · ' + json[index]['title'])));
 		}
 	}
 }
+
+function deployContentList() {
+
+	let index = window.parseInt(getQueryString('i')) || window.parseInt(getQueryString('date'));
+	if (window.isNaN(index)) {
+		message.alert('发生错误', '缺少参数或参数类型不正确，请检查URL是否正确', function () {
+			window.location.replace('/');
+		});
+		return;
+	}
+	$.ajax({
+		type: "GET",
+		url: "content.json?timestamp=" + (new Date()).valueOf(),
+		dataType: "json",
+		success: function (response) {
+
+			if (response.length <= index)
+				return;
+			listContent(response, index);
+		},
+		error: function () {
+			message.alert('出错了!', '网络连接出错了，请稍后再试');
+		}
+	});
+}
+
 
 function getQueryString(param) {
 	var reg = new RegExp("(^|&)" + param + "=([^&]*)(&|$)");
