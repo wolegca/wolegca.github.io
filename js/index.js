@@ -56,6 +56,7 @@ $.ajax({
 						}
 					});
 					appendContent(md.render(res));
+					loadCss("css/highlight.css");
 					loadCss('js/highlight/styles/atom-one-light.min.css')
 				},
 				error: function () {

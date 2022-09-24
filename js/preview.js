@@ -34,6 +34,7 @@
 
             let res = md.render(response);
             appendContent(res);
+            loadCss("css/highlight.css");
             loadCss('js/highlight/styles/atom-one-light.min.css')
         },
         error: function () {
