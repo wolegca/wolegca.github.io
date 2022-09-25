@@ -30,3 +30,21 @@ b.name {
 	color: orange;
 	font-size: larger;
 }
+ol {
+	overflow: auto;
+}
+ol::-webkit-scrollbar {
+	height: 17px;
+	background-color: transparent;
+}
+ol::-webkit-scrollbar-thumb {
+	height: 13px;
+	background-color: rgba(0,0,0,.3);
+	border-radius: 5px;
+}
+ol::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(0,0,0,.5);
+}
+code ol {
+	margin-bottom: 0px;
+}

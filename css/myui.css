@@ -4,6 +4,10 @@
 	box-sizing: border-box
 }
 
+a:visited {
+	color: white;
+}
+
 body,
 html {
 	margin: 0;
